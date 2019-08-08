@@ -10,6 +10,14 @@
   </head>
 
   <body>
+
+    <% if logged_in? %>
+    <form action="<%= sessions_url %>" method="POST">
+    <%= render 'form_auth' %>
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Logout">
+    </form>
+    <% end %>
     <%= yield %>
   </body>
 </html>

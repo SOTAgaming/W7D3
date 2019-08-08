@@ -1,0 +1,12 @@
+<form action="<%= sessions_url %>" method="post">
+  <%= render 'form_auth' %>
+  <label>Username:
+    <input type="text" name="session[username]">
+  </label>
+
+  <label>Password:
+    <input type="password" name="session[password]">
+  </label>
+
+  <input type="submit" value="Login">
+</form>
